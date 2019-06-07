@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Báo Điện Tử TH16-News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{!-- <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fontawesome-stars.css"> --}}
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/venobox.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/helper.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v3.3'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="2454404914582479"
+        logged_in_greeting="Chào! Tôi có thể giúp gì cho bạn?" logged_out_greeting="Chào! Tôi có thể giúp gì cho bạn?">
+    </div>
+
+    <!-- Liên hệ & Đăng nhập -->
+    <div class="body-wrapper">
+        <header class="li-header-4">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4">
+                            <div class="header-top-left">
+                                <ul class="phone-wrap">
+                                    <li><span>Liên hệ số điện thoại :</span><a href="#">(+84) 355 351 344</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8">
+                            <div class="header-top-right">
+                                <ul class="ht-menu">
+                                    <li>
+                                            <div class="ht-setting-trigger"><span>Cài đặt</span></div>
+                                            <div class="setting ht-setting">
+                                                <ul class="ht-setting-list">
+                                                    <li><a href="/account">Tài khoản</a></li>
+                                                    <li><a href="/kiemtra">Kiểm tra</a></li>
+                                                    <li><a href="/">Thoát</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle pl-sm-0 pr-sm-0 pl-xs-0 pr-xs-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
+                            <form action="#" class="hm-searchbox">
+                                <select class="nice-select select-search-category">
+                                    <option value="0">Tất cả</option>
+                                    <option value="10">Kinh doanh</option>
+                                    <option value="16">- - Nông sản</option>
+                                    <option value="17">- - Hải sản</option>
+                                    <option value="11">Xã hội</option>
+                                    <option value="18">- - Thời sự</option>
+                                    <option value="19">- - Giao thông</option>
+                                    <option value="20">- - Môi trường</option>
+                                    <option value="21">- - Khí hậu</option>
+                                    <option value="12">Giải trí</option>
+                                    <option value="22">- - Âm nhạc</option>
+                                    <option value="23">- - Thời trang</option>
+                                    <option value="24">- - Điện ảnh</option>
+                                    <option value="13">Thể thao</option>
+                                    <option value="25">- - Bóng đá</option>
+                                    <option value="26">- - Bóng chuyền</option>
+                                    <option value="27">- - Bơi lội</option>
+                                    <option value="14">Văn hóa</option>
+                                    <option value="28">- - Du lịch</option>
+                                    <option value="29">- - Âm nhạc</option>
+                                    <option value="30">- - Ẩm thực</option>
+                                    <option value="15">Nhà đất</option>
+                                </select>
+                                <input type="text" placeholder="Nhập từ khóa cần tìm kiếm ...">
+                                <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+
+                            <div class="header-middle-right">
+                                <ul class="hm-menu">
+                                    {{!-- Đăng nhập/ Đăng ký --}}
+                                    <li class="hm-minicart">
+                                        <div class="hm-minicart-trigger">
+                                            <span class="item-icon"></span>
+                                            <span class="item-text">Sign In | Register
+                                                <span class="cart-item-count"></span>
+                                            </span>
+                                        </div>
+                                        <span></span>
+                                        <div class="minicart">
+                                            <ul class="minicart-product-list">
+                                                <li>
+                                                    <a href="/login" class="btn btn-primary btn-block btn-flat">
+                                                        <span>Đăng nhập</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/register" class="btn btn-primary btn-block btn-flat">
+                                                        <span>Đăng ký</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/" class="btn btn-primary btn-block btn-dark">
+                                                        <span>Thoát</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom header-sticky stick d-none d-lg-block d-xl-block">
+                <div class="container">
+                    <!-- Thanh công cụ -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="hb-menu">
+                                <nav>
+                                    <ul>
+                                        <li class="dropdown-holder"><a href="/">Home</a>
+                                        </li>
+                                        <li class="megamenu-holder"><a href="audio-post">Menu</a>
+                                            <ul class="megamenu hb-megamenu">
+                                                <li><a href="menu.html">Kinh doanh</a>
+                                                    <ul>
+                                                        <li><a href="nongsan.html">Nông sản</a></li>
+                                                        <li><a href="haisan.html">Hải sản</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="xahoi.html">Xã hội</a>
+                                                    <ul>
+                                                        <li><a href="thoisu.html">Thời sự</a></li>
+                                                        <li><a href="giaothong.html">Giao thông</a></li>
+                                                        <li><a href="moitruong.html">Môi trường</a></li>
+                                                        <li><a href="khihau.html">Khí hậu</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="giaitri.html">Giải trí</a>
+                                                    <ul>
+                                                        <li><a href="amnhac.html">Âm nhạc</a></li>
+                                                        <li><a href="thoitrang">Thời trang</a>
+                                                        </li>
+                                                        <li><a href="dienanh.html">Điện ảnh</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="thethao.html">Thể thao</a>
+                                                    <ul>
+                                                        <li><a href="bongda.html">Bóng đá</a></li>
+                                                        <li><a href="bongchuyen.html">Bóng chuyền</a></li>
+                                                        <li><a href="boiloi.html">Bơi lội</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="vanhoa.html">Văn hóa</a>
+                                                    <ul>
+                                                        <li><a href="dulich.html">Du lịch</a></li>
+                                                        <li><a href="amnhac.html">Âm nhạc</a></li>
+                                                        <li><a href="amthuc.html">Ẩm thực</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="nhadat.html">Nhà đất</a></li>
+                                            </ul>
+                                        </li>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-area mobile-menu-area-4 d-lg-none d-xl-none col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="mobile-menu">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+
+    <style type="text/css">
+        .sa-lpbif p {
+            margin: 3px 0;
+            font-size: 18px;
+            color: #ff502e;
+            font-weight: bold;
+        }
+
+        #cfacebook {
+            position: fixed;
+            bottom: 0px;
+            right: 10px;
+            z-index: 999999999999999;
+            width: 250px;
+            height: 40px;
+            box-shadow: 6px 6px 6px 10px rgba(0, 0, 0, 0.2);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+            background-color: #3a5795;
+            line-height: 40px;
+            padding-left: 50px;
+        }
+
+        #cfacebook .fchat {
+            float: left;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            display: none;
+            background-color: #fff;
+        }
+
+        #cfacebook .fchat .fb-page {
+            float: left;
+        }
+
+        #cfacebook a.chat_fb {
+            background: #3a5795 url(/Content/images/ic_arrow_up_white.png) 225px 15px no-repeat;
+            float: left;
+            width: 250px;
+            height: 40px;
+            color: #fff;
+            text-decoration: none;
+            line-height: 40px;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+            border: 0;
+            border-bottom: 1px solid #133783;
+            z-index: 9999999;
+            font-size: 13px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 50px;
+            padding-left: 100px;
+        }
+
+        #cfacebook a.chat_fb img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #cfacebook a.chat_fb:hover {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        a.float-btn {
+            background: #000;
+            width: 176px;
+            height: 41px;
+            display: block;
+            border: 2px solid rgb(206, 206, 206);
+            font-size: 17px;
+            line-height: 34px;
+            text-align: center;
+            color: #fff;
+            margin: 0 0 1px 0;
+        }
+
+        .float-menu {
+            width: 179px;
+            position: fixed;
+            right: 0;
+            top: 40%;
+            z-index: 999;
+            transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -webkit-transition: all ease 0.3s;
+        }
+
+        .sa-logo img {
+            width: 210px;
+            height: 53px;
+        }
+    </style>
+    <div class="float-menu visible-lg-block" style="margin-right: 0px;">
+        <a href="https://www.facebook.com/cuccungplus/" target="_blank" class="float-btn"
+            style="background: #3b5998;"><i class="fa fa-facebook" aria-hidden="true"></i> Liên hệ Facebook</a>
+    </div>
+            {{{body}}}
+
+    <div class="footer">
+        <div class="footer-static-top">
+            <div class="container">
+                <div class="footer-shipping pt-60 pb-25">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center pt-30 pb-50">
+            <span><a href="/" target="_blank">
+                    <p>© 2019. Bản quyền thuộc về Nguyễn Anh Tuấn</p>
+                </a></span>
+        </div>
+    </div>
+
+    <div class="modal fade modal-wrapper" id="exampleModalCenter">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-inner-area row">
+                        <div class="col-lg-5 col-md-6 col-sm-6">
+                            <div class="product-details-left">
+                                <div class="product-details-images slider-navigation-1">
+                                    <div class="lg-image">
+                                        <img src="images/product/large-size/1.jpg" alt="product image">
+                                    </div>
+                                    <div class="lg-image">
+                                        <img src="images/product/large-size/2.jpg" alt="product image">
+                                    </div>
+                                    <div class="lg-image">
+                                        <img src="images/product/large-size/3.jpg" alt="product image">
+                                    </div>
+                                    <div class="lg-image">
+                                        <img src="images/product/large-size/4.jpg" alt="product image">
+                                    </div>
+                                    <div class="lg-image">
+                                        <img src="images/product/large-size/5.jpg" alt="product image">
+                                    </div>
+                                    <div class="lg-image">
+                                        <img src="images/product/large-size/6.jpg" alt="product image">
+                                    </div>
+                                </div>
+                                <div class="product-details-thumbs slider-thumbs-1">
+                                    <div class="sm-image"><img src="images/product/small-size/1.jpg"
+                                            alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="images/product/small-size/2.jpg"
+                                            alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="images/product/small-size/3.jpg"
+                                            alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="images/product/small-size/4.jpg"
+                                            alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="images/product/small-size/5.jpg"
+                                            alt="product image thumb"></div>
+                                    <div class="sm-image"><img src="images/product/small-size/6.jpg"
+                                            alt="product image thumb"></div>
+                                </div>
+                            </div>
+    
+                            <div class="product-additional-info pt-25">
+                                <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to
+                                    wishlist</a>
+                                <div class="product-social-sharing pt-25">
+                                    <ul>
+                                        <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                        <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a>
+                                        </li>
+                                        <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google
+                                                +</a></li>
+                                        <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax-mail.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.barrating.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/venobox.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/scrollUp.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
